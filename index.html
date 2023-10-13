@@ -167,6 +167,122 @@
         
 
 <div class="post">
+    <a href="/2023/10/13/%E5%B8%AE%E5%B8%AE%E6%88%91%EF%BC%8C-oier%E5%85%88%E7%94%9F/">
+        <h2 class="post-title">帮帮我， oier先生</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E6%B1%82%E5%8A%A9%E7%AB%99/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                -求助站
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/10/13
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h1 id="怎么都调不对，-求调"><a href="#怎么都调不对，-求调" class="headerlink" title="怎么都调不对， 求调"></a>怎么都调不对， 求调</h1><pre><code class="c++">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+#define int long long
+#define LL long long
+const int N = 1010;
+const int M = N * N / 2;
+const int MOD = 1e9 + 7;
+template &lt;typename T&gt; inline void read(T &amp;x)&#123;
+    int w = 1;char s;x = 0;
+    while (!isdigit(s = getchar())) if (s == &#39;-&#39;) w = -1;
+    while (isdigit(s)) x = (x &lt;&lt; 3) + (x &lt;&lt; 1), x += s - &#39;0&#39;, s = getchar();
+    x *= w;
+&#125;
+
+int n, m, T;
+bitset&lt;1010&gt;ver[N];
+vector &lt;int&gt; may1, may2;
+inline void add(int u, int v)&#123;
+    ver[u] ^= (1 &lt;&lt; (v - 1));
+&#125;
+
+inline int ksc(int x, int y)&#123;
+    int ans = 0;int temp = x;
+    while (y)&#123;
+        if (y &amp; 1) ans += temp;
+        y &gt;&gt;= 1;
+        temp &lt;&lt;= 1;
+        ans %= MOD;
+    &#125;
+    return ans;
+&#125;
+signed main()&#123;
+    freopen(&quot;trz.in&quot;,&quot;r&quot;,stdin);
+    freopen(&quot;trz.out&quot;,&quot;w&quot;,stdout);
+    read(T);
+    while (T--)&#123;
+
+        may1.clear();may2.clear();
+        int ans = 0;
+        read(n), read(m);
+        for (register int i = 1; i &lt;= n; i++)
+            ver[i].reset();
+        for (register int i = 1, u, v; i &lt;= m; read(u), read(v), add(u, v), add(v, u), i++);
+        for (register int i = 1; i &lt;= n; i++)&#123;
+            if (ver[i].count() &gt;= 6) may1.push_back(i);
+            if (ver[i].count() &gt;= 4) may2.push_back(i);
+        &#125;
+        for (register auto i : may1)&#123;
+            for (register auto j : may2)&#123;
+                if (i != j)&#123;
+                    ver[0]=ver[i]&amp;ver[j];
+                    register int cnt = ver[i].count(), cnt2 = ver[0].count();
+                    if(ver[i][j - 1])  cnt--;
+                    if (cnt2 &gt;= 4)&#123;
+                        ans = (ans + ksc(ksc(cnt2, ksc(cnt2 - 1, ksc(cnt2 - 2, cnt2 - 3))) / 24,((ksc(cnt - 4, cnt - 5))) / 2ll)) % MOD;
+                    &#125;
+                &#125;
+            &#125;
+        &#125;
+        printf(&quot;%lld\n&quot;, ans);
+    &#125;
+&#125;
+</code></pre>
+<p>附上题目与得分图</p>
+<p><img src="https://github.com/taochuxiaxia/test/blob/main/%E9%A2%98%E7%9B%AE.jpeg?raw=true"></p>
+<p><img src="https://github.com/taochuxiaxia/test/blob/main/%E7%BB%93%E6%9E%9C.jpeg?raw=true"></p>
+<p></p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/%E6%B1%82%E5%8A%A9/" style="color: #00a596">求助</a>
+        </span>
+        
+    </div>
+    <a href="/2023/10/13/%E5%B8%AE%E5%B8%AE%E6%88%91%EF%BC%8C-oier%E5%85%88%E7%94%9F/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
     <a href="/2023/10/12/%E4%BB%8A%E6%97%A5%E4%B8%80%E8%A8%802/">
         <h2 class="post-title">今日一言2</h2>
     </a>
@@ -199,7 +315,7 @@
         
         <span class="tag">
             
-            <a href="/tags/%E4%B8%80%E8%A8%80/" style="color: #ff7d73">一言</a>
+            <a href="/tags/%E4%B8%80%E8%A8%80/" style="color: #ffa2c4">一言</a>
         </span>
         
     </div>
@@ -238,7 +354,7 @@
         
         <span class="tag">
             
-            <a href="/tags/%E4%B8%80%E8%A8%80/" style="color: #ffa2c4">一言</a>
+            <a href="/tags/%E4%B8%80%E8%A8%80/" style="color: #00bcd4">一言</a>
         </span>
         
     </div>
@@ -322,7 +438,7 @@
         
         <span class="tag">
             
-            <a href="/tags/%E4%B8%80%E8%A8%80/" style="color: #00a596">一言</a>
+            <a href="/tags/%E4%B8%80%E8%A8%80/" style="color: #03a9f4">一言</a>
         </span>
         
     </div>
@@ -361,7 +477,7 @@
         
         <span class="tag">
             
-            <a href="/tags/%E8%BF%9B%E5%BA%A6/" style="color: #00a596">进度</a>
+            <a href="/tags/%E8%BF%9B%E5%BA%A6/" style="color: #00bcd4">进度</a>
         </span>
         
     </div>
@@ -400,7 +516,7 @@
         
         <span class="tag">
             
-            <a href="/tags/study/" style="color: #00a596">study</a>
+            <a href="/tags/study/" style="color: #00bcd4">study</a>
         </span>
         
     </div>
@@ -493,7 +609,7 @@
         
         <span class="tag">
             
-            <a href="/tags/study/" style="color: #ffa2c4">study</a>
+            <a href="/tags/study/" style="color: #ff7d73">study</a>
         </span>
         
     </div>
@@ -535,7 +651,7 @@
         
         <span class="tag">
             
-            <a href="/tags/others/" style="color: #00bcd4">others</a>
+            <a href="/tags/others/" style="color: #03a9f4">others</a>
         </span>
         
     </div>
@@ -750,67 +866,11 @@ int main()&#123;
         
         <span class="tag">
             
-            <a href="/tags/code/" style="color: #ffa2c4">code</a>
+            <a href="/tags/code/" style="color: #03a9f4">code</a>
         </span>
         
     </div>
     <a href="/2023/10/04/2023-10-04-%E6%80%BB%E7%BB%93/" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
-    <a href="/2023/10/04/test-comments/">
-        <h2 class="post-title">test comments</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2023/10/4
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <p>​	留言测试:</p>
-<pre><code>&lt;script src=&quot;https://giscus.app/client.js&quot;
-    data-repo=&quot;taochuxiaxia/taochuxiaxia.github.io&quot;
-    data-repo-id=&quot;R_kgDOKa6Cjw&quot;
-    data-category=&quot;Announcements&quot;
-    data-category-id=&quot;DIC_kwDOKa6Cj84CZ2dD&quot;
-    data-mapping=&quot;pathname&quot;
-    data-strict=&quot;0&quot;
-    data-reactions-enabled=&quot;1&quot;
-    data-emit-metadata=&quot;0&quot;
-    data-input-position=&quot;bottom&quot;
-    data-theme=&quot;preferred_color_scheme&quot;
-    data-lang=&quot;zh-CN&quot;
-    crossorigin=&quot;anonymous&quot;
-    async&gt;
-</code></pre>
-<p></p>
-
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        <span class="icon">
-            <i class="fa-solid fa-tags fa-fw"></i>
-        </span>
-        
-        
-        
-        <span class="tag">
-            
-            <a href="/tags/others/" style="color: #03a9f4">others</a>
-        </span>
-        
-    </div>
-    <a href="/2023/10/04/test-comments/" class="go-post">阅读全文</a>
 </div>
 
 

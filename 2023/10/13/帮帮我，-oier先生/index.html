@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>fight | 陶初夏の个人博客</title>
+    <title>帮帮我， oier先生 | 陶初夏の个人博客</title>
     <meta name="author" content="夏夏" />
     <meta name="description" content="让世界为奇迹倾倒！" />
     <meta name="keywords" content="code Genshin" />
@@ -150,14 +150,23 @@
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
     <div>
-        <h1>fight</h1>
+        <h1>帮帮我， oier先生</h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2023/10/6
+            2023/10/13
+        </span>
+        
+        <span class="category">
+            <a href="/categories/%E6%B1%82%E5%8A%A9%E7%AB%99/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                -求助站
+            </a>
         </span>
         
         
@@ -169,7 +178,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/study/" style="color: #00a596">study</a>
+                <a href="/tags/%E6%B1%82%E5%8A%A9/" style="color: #00a596">求助</a>
             </span>
             
         </span>
@@ -177,7 +186,75 @@
     </div>
     
     <div class="content" v-pre>
-        <h1 id="希望在noip之前能够hu完所有的知识点漏洞！"><a href="#希望在noip之前能够hu完所有的知识点漏洞！" class="headerlink" title="希望在noip之前能够hu完所有的知识点漏洞！"></a>希望在noip之前能够hu完所有的知识点漏洞！</h1>
+        <h1 id="怎么都调不对，-求调"><a href="#怎么都调不对，-求调" class="headerlink" title="怎么都调不对， 求调"></a>怎么都调不对， 求调</h1><pre><code class="c++">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+#define int long long
+#define LL long long
+const int N = 1010;
+const int M = N * N / 2;
+const int MOD = 1e9 + 7;
+template &lt;typename T&gt; inline void read(T &amp;x)&#123;
+    int w = 1;char s;x = 0;
+    while (!isdigit(s = getchar())) if (s == &#39;-&#39;) w = -1;
+    while (isdigit(s)) x = (x &lt;&lt; 3) + (x &lt;&lt; 1), x += s - &#39;0&#39;, s = getchar();
+    x *= w;
+&#125;
+
+int n, m, T;
+bitset&lt;1010&gt;ver[N];
+vector &lt;int&gt; may1, may2;
+inline void add(int u, int v)&#123;
+    ver[u] ^= (1 &lt;&lt; (v - 1));
+&#125;
+
+inline int ksc(int x, int y)&#123;
+    int ans = 0;int temp = x;
+    while (y)&#123;
+        if (y &amp; 1) ans += temp;
+        y &gt;&gt;= 1;
+        temp &lt;&lt;= 1;
+        ans %= MOD;
+    &#125;
+    return ans;
+&#125;
+signed main()&#123;
+    freopen(&quot;trz.in&quot;,&quot;r&quot;,stdin);
+    freopen(&quot;trz.out&quot;,&quot;w&quot;,stdout);
+    read(T);
+    while (T--)&#123;
+
+        may1.clear();may2.clear();
+        int ans = 0;
+        read(n), read(m);
+        for (register int i = 1; i &lt;= n; i++)
+            ver[i].reset();
+        for (register int i = 1, u, v; i &lt;= m; read(u), read(v), add(u, v), add(v, u), i++);
+        for (register int i = 1; i &lt;= n; i++)&#123;
+            if (ver[i].count() &gt;= 6) may1.push_back(i);
+            if (ver[i].count() &gt;= 4) may2.push_back(i);
+        &#125;
+        for (register auto i : may1)&#123;
+            for (register auto j : may2)&#123;
+                if (i != j)&#123;
+                    ver[0]=ver[i]&amp;ver[j];
+                    register int cnt = ver[i].count(), cnt2 = ver[0].count();
+                    if(ver[i][j - 1])  cnt--;
+                    if (cnt2 &gt;= 4)&#123;
+                        ans = (ans + ksc(ksc(cnt2, ksc(cnt2 - 1, ksc(cnt2 - 2, cnt2 - 3))) / 24,((ksc(cnt - 4, cnt - 5))) / 2ll)) % MOD;
+                    &#125;
+                &#125;
+            &#125;
+        &#125;
+        printf(&quot;%lld\n&quot;, ans);
+    &#125;
+&#125;
+</code></pre>
+<p>附上题目与得分图</p>
+<p><img src="https://github.com/taochuxiaxia/test/blob/main/%E9%A2%98%E7%9B%AE.jpeg?raw=true"></p>
+<p><img src="https://github.com/taochuxiaxia/test/blob/main/%E7%BB%93%E6%9E%9C.jpeg?raw=true"></p>
+<p></p>
+
     </div>
     
     
