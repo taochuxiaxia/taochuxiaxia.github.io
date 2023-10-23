@@ -167,6 +167,281 @@
         
 
 <div class="post">
+    <a href="/2023/10/05/%E9%93%B8%E5%B8%81%E6%95%B0%E6%8D%AE/">
+        <h2 class="post-title">铸币数据</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/2023-10/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                2023/10
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/10/5
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>​	今天真是无语死了，T2数据居然有非法状态。然后T4我乍一看好简单， 直接快速把它给秒了。上洛谷一看， 还是个紫题， 直接狂喜：这不是白送经验吗？ 结果考完才发现看错题了。。。。。。不过T3本来在洛谷上只有96分的， 结果在lemon测完AC了， <del>实力太强</del>运气太好了。</p>
+<p>​	晚上学习了<del>平板电视</del>pbds， 总算是弥补了我平衡树方面的短板。</p>
+<p></p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/others/" style="color: #ffa2c4">others</a>
+        </span>
+        
+    </div>
+    <a href="/2023/10/05/%E9%93%B8%E5%B8%81%E6%95%B0%E6%8D%AE/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2023/10/04/2023-10-04-%E6%80%BB%E7%BB%93/">
+        <h2 class="post-title">2023-10-04 总结</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/2023-10/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                2023/10
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/10/4
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h1 id="10月4日总结"><a href="#10月4日总结" class="headerlink" title="10月4日总结"></a>10月4日总结</h1><table>
+<thead>
+<tr>
+<th>题目</th>
+<th>预估</th>
+<th>实际</th>
+<th>差值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="http://10.0.247.99/problem.php?cid=1207&pid=0">周年纪念晚会</a></td>
+<td>100</td>
+<td>100</td>
+<td>0</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://10.0.247.99/problem.php?cid=1207&pid=1">叶子的染色</a></td>
+<td>100</td>
+<td>100</td>
+<td>0</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://10.0.247.99/problem.php?cid=1207&pid=2">数字游戏2</a></td>
+<td>100</td>
+<td>100</td>
+<td>0</td>
+</tr>
+<tr>
+<td>[ <a target="_blank" rel="noopener" href="http://10.0.247.99/problem.php?cid=1207&pid=3">SCOI2009]Windy 数</a></td>
+<td>100</td>
+<td>100</td>
+<td>0</td>
+</tr>
+</tbody></table>
+<h1 id="T1"><a href="#T1" class="headerlink" title="T1"></a>T1</h1><p>​	这就是一道树形dp的板题， 一个大法师就好了， 代码就没必要放了</p>
+<hr>
+<h1 id="T2"><a href="#T2" class="headerlink" title="T2"></a>T2</h1><p>​	这就是第一题稍微变一点点， 直接上代码吧。</p>
+<pre><code class="c++">//
+// Created by 96454 on 2023/10/4.
+//
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+#define int long long
+const int N = 1e4 + 10;
+const int INF = 2147483647;
+vector &lt;int&gt; ver[N];
+int m,n,c[N];
+int root,num;
+int f[N][2];
+
+template &lt;typename T&gt; inline void read(T &amp;x)&#123;
+    int w = 1;char s;x = 0;
+    while (!isdigit(s = getchar())) s = &#39;-&#39;;
+    while (isdigit(s)) x = (x &lt;&lt; 3) + (x &lt;&lt; 1), x += s - &#39;0&#39;, s = getchar();
+    x *= w;
+&#125;
+inline void add(int u,int v)
+&#123;
+    ver[u].push_back(v);
+&#125;
+void dfs(int u,int fa)
+&#123;
+    if(u&lt;=n) return ;
+    for(auto v : ver[u])
+        if(v != fa)
+        &#123;
+            dfs(v,u);
+            f[u][0]+=min(f[v][0]-1,f[v][1]);
+            f[u][1]+=min(f[v][1]-1,f[v][0]);
+        &#125;
+&#125;
+signed main()
+&#123;
+    read(m);read(n);
+    root = n+1;
+    for(int i = 1; i &lt;= n; i++) read(c[i]);
+    for(int i=1, u, v;i&lt;=m-1;i++)
+    &#123;
+        read(u);read(v);
+        add(u,v),add(v,u);
+    &#125;
+    for(int i=1;i&lt;=m;i++)
+    &#123;
+        f[i][0]=f[i][1]=1;
+        if(i&lt;=n) f[i][(!c[i])]=INF;
+    &#125;
+    dfs(root,root);
+    printf(&quot;%lld&quot;,min(f[root][0],f[root][1]));
+&#125;
+</code></pre>
+<hr>
+<h1 id="T3"><a href="#T3" class="headerlink" title="T3"></a>T3</h1><p>​	这是一道显然的数位dp，  就是不用dfs太难写啦！</p>
+<pre><code class="c++">//
+// Created by 96454 on 2023/10/4.
+//
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+const int N = 12, M = 102;
+int f[N][10][M], p, l, r;
+int dp(int x)&#123;
+    if(x == 0) return 1;
+    int ans = 0, last = 0;
+    vector&lt;int&gt; a;
+    while(x) a.push_back(x % 10), x /= 10;
+    int la = a.size()-1;
+    for(int i = la; i &gt;= 0; --i)&#123;
+        int xx =a[i];
+        for(int j = 0; j&lt;xx; j++)
+            ans += f[i+1][j][((-last) % p + p) % p];
+
+        last += xx;
+        if(!i &amp;&amp; last % p == 0) ans ++;
+    &#125;
+    return ans;
+&#125;
+int main()&#123;
+    while (cin &gt;&gt; l &gt;&gt; r &gt;&gt; p)&#123;
+        memset(f,0,sizeof f);
+        for(int i = 0; i&lt;=9; i++) f[1][i][i%p]++;
+        for(int i = 2; i&lt;N; i++)
+            for(int j = 0; j&lt;=9; j++)
+                for(int k = 0; k&lt;p; k++)
+                    for(int x = 0; x&lt;=9; x++)
+                        f[i][j][k] += f[i-1][x][((k - j) % p + p) % p];
+        printf(&quot;%d\n&quot;, dp(r) - dp(l - 1));
+    &#125;
+    return 0;
+&#125;
+</code></pre>
+<hr>
+<h1 id="T4"><a href="#T4" class="headerlink" title="T4"></a>T4</h1><p>​	这道题是考过的原题， 一眼数位dp</p>
+<pre><code class="c++">//
+// Created by 96454 on 2023/10/4.
+//
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+vector &lt;int&gt;dim;
+int f[110][100];
+int dfs(int x, int st, int op)
+&#123;
+    if (!x) return 1;
+    if (!op &amp;&amp; ~f[x][st]) return f[x][st];
+    int maxx = op ? dim[x] : 9, ret = 0;
+    for (int i = 0; i &lt;= maxx; i++) &#123;
+        if (abs(st - i) &lt; 2) continue;
+        if (st == 11 &amp;&amp; i == 0)
+            ret += dfs(x - 1, 11, op &amp; (i == maxx));
+        else
+            ret += dfs(x - 1, i, op &amp; (i == maxx));
+    &#125;
+    if (!op) f[x][st] = ret;
+    return ret;
+&#125;
+
+int solve(int x) &#123;
+    memset(f, -1, sizeof f);
+    dim.clear();
+    dim.push_back(-1);
+    int t = x;
+    while (x) &#123;
+        dim.push_back(x % 10);
+        x /= 10;
+    &#125;
+    return dfs(dim.size() - 1, 11, 1);
+&#125;
+int main()&#123;
+    int a, b;
+    scanf(&quot;%d%d&quot;, &amp;a, &amp;b);
+    printf(&quot;%d&quot;, solve(b) - solve(a - 1));
+&#125;
+</code></pre>
+<hr>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>​	今天的题都能够一眼看出题目考点， 只要之前没走神就可以随便AK</p>
+<script>
+
+</script>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/code/" style="color: #03a9f4">code</a>
+        </span>
+        
+    </div>
+    <a href="/2023/10/04/2023-10-04-%E6%80%BB%E7%BB%93/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
     <a href="/2023/10/04/test-comments/">
         <h2 class="post-title">test comments</h2>
     </a>
@@ -224,7 +499,7 @@
         
         <span class="tag">
             
-            <a href="/tags/others/" style="color: #00bcd4">others</a>
+            <a href="/tags/others/" style="color: #ffa2c4">others</a>
         </span>
         
     </div>
@@ -274,7 +549,7 @@
         
         <span class="tag">
             
-            <a href="/tags/others/" style="color: #00bcd4">others</a>
+            <a href="/tags/others/" style="color: #03a9f4">others</a>
         </span>
         
     </div>
@@ -323,7 +598,7 @@
         
         <span class="tag">
             
-            <a href="/tags/others/" style="color: #ffa2c4">others</a>
+            <a href="/tags/others/" style="color: #00bcd4">others</a>
         </span>
         
     </div>
@@ -375,7 +650,7 @@
         
         <span class="tag">
             
-            <a href="/tags/others/" style="color: #03a9f4">others</a>
+            <a href="/tags/others/" style="color: #ffa2c4">others</a>
         </span>
         
     </div>
