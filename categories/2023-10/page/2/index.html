@@ -1,739 +1,483 @@
 
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>Categories: 2023/10 | 陶初夏の个人博客</title>
-    <meta name="author" content="夏夏" />
-    <meta name="description" content="让世界为奇迹倾倒！" />
-    <meta name="keywords" content="code Genshin" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <link rel="icon" href="/images/wife2.jpg" />
-    <link rel="preconnect" href="https://cdn.staticfile.org" />
-<script src="https://cdn.staticfile.org/vue/3.3.4/vue.global.prod.min.js"></script>
-<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.0/css/all.min.css" />
-<link rel="preconnect" href="https://fonts.loli.net" />
-<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
-<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
-<script> const mixins = {}; </script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 
-<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
 
 
-<script src="https://cdn.staticfile.org/highlight.js/11.8.0/highlight.min.js"></script>
-<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
-<link
-    rel="stylesheet"
-    href="https://cdn.staticfile.org/highlight.js/11.8.0/styles/github.min.css"
-/>
-<script src="/js/lib/highlight.js"></script>
+<link rel="alternate" type="application/rss+xml" title="陶初夏の个人博客" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="陶初夏の个人博客" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="陶初夏の个人博客" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+
+<link rel="canonical" href="http://example.com/categories/2023-10/page/2/">
 
 
 
-<script src="/js/lib/preview.js"></script>
-
-
-
-
-
-<link rel="stylesheet" href="/css/main.css" />
-
+  <title>Category: 2023/10 | 陶初夏的小窝 = 陶初夏の个人博客</title>
 <meta name="generator" content="Hexo 6.3.0"></head>
-<body>
-    <div id="layout">
-        <transition name="fade">
-            <div id="loading" v-show="loading">
-                <div id="loading-circle">
-                    <h2>LOADING</h2>
-                    <p>加载过慢请开启缓存 浏览器默认开启</p>
-                    <img src="/images/wife2.jpg" />
-                </div>
-            </div>
-        </transition>
-        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
-    <nav id="desktop-menu">
-        <a class="title" href="/">
-            <span>陶初夏の个人博客</span>
-        </a>
-        
-        <a href="/">
-            <i class="fa-solid fa-house fa-fw"></i>
-            <span>&ensp;Home</span>
-        </a>
-        
-        <a href="/about">
-            <i class="fa-solid fa-id-card fa-fw"></i>
-            <span>&ensp;About</span>
-        </a>
-        
-        <a href="/archives">
-            <i class="fa-solid fa-box-archive fa-fw"></i>
-            <span>&ensp;Archives</span>
-        </a>
-        
-        <a href="/categories">
-            <i class="fa-solid fa-bookmark fa-fw"></i>
-            <span>&ensp;Categories</span>
-        </a>
-        
-        <a href="/tags">
-            <i class="fa-solid fa-tags fa-fw"></i>
-            <span>&ensp;Tags</span>
-        </a>
-        
-    </nav>
-    <nav id="mobile-menu">
-        <div class="title" @click="showMenuItems = !showMenuItems">
-            <i class="fa-solid fa-bars fa-fw"></i>
-            <span>&emsp;陶初夏の个人博客</span>
-        </div>
-        <transition name="slide">
-            <div class="items" v-show="showMenuItems">
-                
-                <a href="/">
-                    <div class="item">
-                        <div style="min-width: 20px; max-width: 50px; width: 10%">
-                            <i class="fa-solid fa-house fa-fw"></i>
-                        </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
-                    </div>
-                </a>
-                
-                <a href="/about">
-                    <div class="item">
-                        <div style="min-width: 20px; max-width: 50px; width: 10%">
-                            <i class="fa-solid fa-id-card fa-fw"></i>
-                        </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
-                    </div>
-                </a>
-                
-                <a href="/archives">
-                    <div class="item">
-                        <div style="min-width: 20px; max-width: 50px; width: 10%">
-                            <i class="fa-solid fa-box-archive fa-fw"></i>
-                        </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
-                    </div>
-                </a>
-                
-                <a href="/categories">
-                    <div class="item">
-                        <div style="min-width: 20px; max-width: 50px; width: 10%">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
-                    </div>
-                </a>
-                
-                <a href="/tags">
-                    <div class="item">
-                        <div style="min-width: 20px; max-width: 50px; width: 10%">
-                            <i class="fa-solid fa-tags fa-fw"></i>
-                        </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
-                    </div>
-                </a>
-                
-            </div>
-        </transition>
-    </nav>
-</div>
-<transition name="fade">
-    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
-</transition>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">
+    Posted in category "2023/10"
+  </h1>
 
-        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div id="archives">
-    
-    <div class="categories-tags">
-        
-        
-        
-        <span>
-            <a href="/categories/2023-10/" style="background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                2023/10
-            </a>
-        </span>
-        
-        
-        
-        
-    </div>
-    
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2023/10/23</div>
-            <a href="/2023/10/23/csp-s%E6%B8%B8%E8%AE%B0/">
-                <h3>csp-s游记</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="/categories/2023-10/">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        2023/10
-                    </a>
-                </span>
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </span>
-                    
-                    
-                    <span class="tag">
-                        
-                        <a href="/tags/%E6%B8%B8%E8%AE%B0/" style="color: #ff7d73">游记</a>
-                    </span>
-                    
-                </span>
-                
-            </div>
+          </div>
         </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
     </div>
-    
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2023/10/15</div>
-            <a href="/2023/10/15/update-news-2/">
-                <h3>update-news-2</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="/categories/2023-10/">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        2023/10
-                    </a>
-                </span>
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </span>
-                    
-                    
-                    <span class="tag">
-                        
-                        <a href="/tags/%E8%BF%9B%E5%BA%A6/" style="color: #ffa2c4">进度</a>
-                    </span>
-                    
-                </span>
-                
-            </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">陶初夏的小窝</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://github.com/taochuxiaxia/test/blob/main/OIP-C.jpg?raw=true"></li>
+          <li class="item" data-background-image="https://github.com/taochuxiaxia/test/blob/main/wife15.jpg?raw=true"></li>
+          <li class="item" data-background-image="https://github.com/taochuxiaxia/test/blob/main/wife6.jpg?raw=true"></li>
+          <li class="item" data-background-image="https://github.com/taochuxiaxia/test/blob/main/wife10.jpg?raw=true"></li>
+          <li class="item" data-background-image="https://github.com/taochuxiaxia/test/blob/main/tuopa.jpg?raw=true"></li>
+          <li class="item" data-background-image="https://github.com/taochuxiaxia/test/blob/main/wife8.jpg?raw=true"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="collapse wrap">
+    <h2 class="item header">
+      <a href="/categories">All</a>
+      <small>/</small>
+      2023/10
+      <small>Category</small>
+    </h2>
+        <article class="item normal" itemscope itemtype="http://schema.org/Article">
+          <div class="meta">
+            <time itemprop="dateCreated"
+                  datetime="2023-10-05T20:29:07+08:00"
+                  content="2023-10-05">
+              10-05
+            </time>
+          </div>
+
+          <div class="title">
+              <a href="/2023/10/05/%E9%93%B8%E5%B8%81%E6%95%B0%E6%8D%AE/" itemprop="url">
+                <span itemprop="name">铸币数据</span>
+              </a>
+          </div>
+        </article>
+        <article class="item normal" itemscope itemtype="http://schema.org/Article">
+          <div class="meta">
+            <time itemprop="dateCreated"
+                  datetime="2023-10-04T19:08:01+08:00"
+                  content="2023-10-04">
+              10-04
+            </time>
+          </div>
+
+          <div class="title">
+              <a href="/2023/10/04/2023-10-04-%E6%80%BB%E7%BB%93/" itemprop="url">
+                <span itemprop="name">2023-10-04 总结</span>
+              </a>
+          </div>
+        </article>
+        <article class="item normal" itemscope itemtype="http://schema.org/Article">
+          <div class="meta">
+            <time itemprop="dateCreated"
+                  datetime="2023-10-04T18:19:01+08:00"
+                  content="2023-10-04">
+              10-04
+            </time>
+          </div>
+
+          <div class="title">
+              <a href="/2023/10/04/test-comments/" itemprop="url">
+                <span itemprop="name">test comments</span>
+              </a>
+          </div>
+        </article>
+        <article class="item normal" itemscope itemtype="http://schema.org/Article">
+          <div class="meta">
+            <time itemprop="dateCreated"
+                  datetime="2023-10-04T16:55:12+08:00"
+                  content="2023-10-04">
+              10-04
+            </time>
+          </div>
+
+          <div class="title">
+              <a href="/2023/10/04/Celebrate/" itemprop="url">
+                <span itemprop="name">Celebrate</span>
+              </a>
+          </div>
+        </article>
+        <article class="item normal" itemscope itemtype="http://schema.org/Article">
+          <div class="meta">
+            <time itemprop="dateCreated"
+                  datetime="2023-10-04T11:32:59+08:00"
+                  content="2023-10-04">
+              10-04
+            </time>
+          </div>
+
+          <div class="title">
+              <a href="/2023/10/04/test-four-floor/" itemprop="url">
+                <span itemprop="name">test four floor</span>
+              </a>
+          </div>
+        </article>
+
+  </div>
+
+  
+  <nav class="pagination">
+    <div class="inner">
+    <a class="extend prev" rel="prev" href="/categories/2023-10/"><i class="ic i-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/categories/2023-10/">1</a><span class="page-number current">2</span>
+    </div>
+  </nav>
+
+
+
         </div>
-    </div>
-    
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2023/10/13</div>
-            <a href="/2023/10/13/%E5%B8%AE%E5%B8%AE%E6%88%91%EF%BC%8C-oier%E5%85%88%E7%94%9F/">
-                <h3>帮帮我， oier先生</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="/categories/2023-10/">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        2023/10
-                    </a>
-                </span>
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </span>
-                    
-                    
-                    <span class="tag">
-                        
-                        <a href="/tags/%E6%B1%82%E5%8A%A9/" style="color: #00a596">求助</a>
-                    </span>
-                    
-                </span>
-                
-            </div>
-        </div>
-    </div>
-    
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2023/10/12</div>
-            <a href="/2023/10/12/%E4%BB%8A%E6%97%A5%E4%B8%80%E8%A8%802/">
-                <h3>今日一言2</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="/categories/2023-10/">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        2023/10
-                    </a>
-                </span>
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </span>
-                    
-                    
-                    <span class="tag">
-                        
-                        <a href="/tags/%E4%B8%80%E8%A8%80/" style="color: #ff7d73">一言</a>
-                    </span>
-                    
-                </span>
-                
-            </div>
-        </div>
-    </div>
-    
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2023/10/10</div>
-            <a href="/2023/10/10/%E4%BB%8A%E6%97%A5%E4%B8%80%E8%A8%801/">
-                <h3>今日一言</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="/categories/2023-10/">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        2023/10
-                    </a>
-                </span>
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </span>
-                    
-                    
-                    <span class="tag">
-                        
-                        <a href="/tags/%E4%B8%80%E8%A8%80/" style="color: #03a9f4">一言</a>
-                    </span>
-                    
-                </span>
-                
-            </div>
-        </div>
-    </div>
-    
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2023/10/9</div>
-            <a href="/2023/10/09/%E5%85%B3%E4%BA%8E%E6%88%91%E4%BB%AC%E6%8D%A2%E4%BA%86%E6%96%B0oj%E8%BF%99%E5%9B%9E%E4%BA%8B/">
-                <h3>关于我们换了新oj这回事</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="/categories/2023-10/">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        2023/10
-                    </a>
-                </span>
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </span>
-                    
-                    
-                    <span class="tag">
-                        
-                        <a href="/tags/others/" style="color: #03a9f4">others</a>
-                    </span>
-                    
-                </span>
-                
-            </div>
-        </div>
-    </div>
-    
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2023/10/9</div>
-            <a href="/2023/10/09/%E4%BB%8A%E6%97%A5%E4%B8%80%E8%A8%80/">
-                <h3>今日一言</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="/categories/2023-10/">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        2023/10
-                    </a>
-                </span>
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </span>
-                    
-                    
-                    <span class="tag">
-                        
-                        <a href="/tags/%E4%B8%80%E8%A8%80/" style="color: #ff7d73">一言</a>
-                    </span>
-                    
-                </span>
-                
-            </div>
-        </div>
-    </div>
-    
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2023/10/8</div>
-            <a href="/2023/10/08/update-news-1/">
-                <h3>update news 1</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="/categories/2023-10/">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        2023/10
-                    </a>
-                </span>
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </span>
-                    
-                    
-                    <span class="tag">
-                        
-                        <a href="/tags/%E8%BF%9B%E5%BA%A6/" style="color: #00a596">进度</a>
-                    </span>
-                    
-                </span>
-                
-            </div>
-        </div>
-    </div>
-    
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2023/10/6</div>
-            <a href="/2023/10/06/fight/">
-                <h3>fight</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="/categories/2023-10/">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        2023/10
-                    </a>
-                </span>
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </span>
-                    
-                    
-                    <span class="tag">
-                        
-                        <a href="/tags/study/" style="color: #03a9f4">study</a>
-                    </span>
-                    
-                </span>
-                
-            </div>
-        </div>
-    </div>
-    
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2023/10/6</div>
-            <a href="/2023/10/06/Further-Aid/">
-                <h3>Further Aid</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="/categories/2023-10/">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        2023/10
-                    </a>
-                </span>
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </span>
-                    
-                    
-                    <span class="tag">
-                        
-                        <a href="/tags/study/" style="color: #03a9f4">study</a>
-                    </span>
-                    
-                </span>
-                
-            </div>
-        </div>
-    </div>
-    
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2023/10/5</div>
-            <a href="/2023/10/05/%E9%93%B8%E5%B8%81%E6%95%B0%E6%8D%AE/">
-                <h3>铸币数据</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="/categories/2023-10/">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        2023/10
-                    </a>
-                </span>
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </span>
-                    
-                    
-                    <span class="tag">
-                        
-                        <a href="/tags/others/" style="color: #00a596">others</a>
-                    </span>
-                    
-                </span>
-                
-            </div>
-        </div>
-    </div>
-    
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2023/10/4</div>
-            <a href="/2023/10/04/2023-10-04-%E6%80%BB%E7%BB%93/">
-                <h3>2023-10-04 总结</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="/categories/2023-10/">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        2023/10
-                    </a>
-                </span>
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </span>
-                    
-                    
-                    <span class="tag">
-                        
-                        <a href="/tags/code/" style="color: #03a9f4">code</a>
-                    </span>
-                    
-                </span>
-                
-            </div>
-        </div>
-    </div>
-    
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2023/10/4</div>
-            <a href="/2023/10/04/test-comments/">
-                <h3>test comments</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="/categories/2023-10/">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        2023/10
-                    </a>
-                </span>
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </span>
-                    
-                    
-                    <span class="tag">
-                        
-                        <a href="/tags/others/" style="color: #ff7d73">others</a>
-                    </span>
-                    
-                </span>
-                
-            </div>
-        </div>
-    </div>
-    
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2023/10/4</div>
-            <a href="/2023/10/04/Celebrate/">
-                <h3>Celebrate</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="/categories/2023-10/">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        2023/10
-                    </a>
-                </span>
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </span>
-                    
-                    
-                    <span class="tag">
-                        
-                        <a href="/tags/others/" style="color: #00bcd4">others</a>
-                    </span>
-                    
-                </span>
-                
-            </div>
-        </div>
-    </div>
-    
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2023/10/4</div>
-            <a href="/2023/10/04/test-four-floor/">
-                <h3>test four floor</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="/categories/2023-10/">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        2023/10
-                    </a>
-                </span>
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </span>
-                    
-                    
-                    <span class="tag">
-                        
-                        <a href="/tags/others/" style="color: #00bcd4">others</a>
-                    </span>
-                    
-                </span>
-                
-            </div>
-        </div>
-    </div>
-    
+        <div id="sidebar">
+          
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+      </div>
+      <div class="related panel pjax" data-title="Related">
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="夏夏"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">夏夏</p>
+  <div class="description" itemprop="description">让世界为奇迹倾倒！</div>
 </div>
 
-            <footer id="footer">
-    <div id="footer-wrap">
-        <div>
-            &copy;
-            2022 - 2023 陶初夏の个人博客
-            <span id="footer-icon">
-                <i class="fa-solid fa-font-awesome fa-fw"></i>
-            </span>
-            &commat;夏夏
-        </div>
-        <div>
-            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
-            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
-        </div>
-        
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">16</span>
+        <span class="name">posts</span>
+      </a>
     </div>
-</footer>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">1</span>
+        <span class="name">categories</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">7</span>
+        <span class="name">tags</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3Rhb2NodXhpYXhpYQ==" title="https:&#x2F;&#x2F;github.com&#x2F;taochuxiaxia"><i class="ic i-github"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>About</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>Archives</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>Categories</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>Tags</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>links</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/categories/2023-10/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
 
         </div>
-        
-        <transition name="fade">
-            <div id="preview" ref="preview" v-show="previewShow">
-                <img id="preview-content" ref="previewContent" />
-            </div>
-        </transition>
-        
-    </div>
-    <script src="/js/main.js"></script>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
     
+<div class="breadcrumb">
+<a href="/categories/2023-10/" title="In 2023/10">2023/10</a>
+</div>
+
+    <span><a href="/2023/10/13/%E5%B8%AE%E5%B8%AE%E6%88%91%EF%BC%8C-oier%E5%85%88%E7%94%9F/" title="帮帮我， oier先生">帮帮我， oier先生</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/2023-10/" title="In 2023/10">2023/10</a>
+</div>
+
+    <span><a href="/2023/10/09/%E5%85%B3%E4%BA%8E%E6%88%91%E4%BB%AC%E6%8D%A2%E4%BA%86%E6%96%B0oj%E8%BF%99%E5%9B%9E%E4%BA%8B/" title="关于我们换了新oj这回事">关于我们换了新oj这回事</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/2023-10/" title="In 2023/10">2023/10</a>
+</div>
+
+    <span><a href="/2023/10/04/2023-10-04-%E6%80%BB%E7%BB%93/" title="2023-10-04 总结">2023-10-04 总结</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/2023-10/" title="In 2023/10">2023/10</a>
+</div>
+
+    <span><a href="/2023/10/06/fight/" title="fight">fight</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/2023-10/" title="In 2023/10">2023/10</a>
+</div>
+
+    <span><a href="/2023/10/12/%E4%BB%8A%E6%97%A5%E4%B8%80%E8%A8%802/" title="今日一言2">今日一言2</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/2023-10/" title="In 2023/10">2023/10</a>
+</div>
+
+    <span><a href="/2023/10/05/%E9%93%B8%E5%B8%81%E6%95%B0%E6%8D%AE/" title="铸币数据">铸币数据</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/2023-10/" title="In 2023/10">2023/10</a>
+</div>
+
+    <span><a href="/2023/10/09/%E4%BB%8A%E6%97%A5%E4%B8%80%E8%A8%80/" title="今日一言">今日一言</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/2023-10/" title="In 2023/10">2023/10</a>
+</div>
+
+    <span><a href="/2023/10/04/test-four-floor/" title="test four floor">test four floor</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/2023-10/" title="In 2023/10">2023/10</a>
+</div>
+
+    <span><a href="/2023/10/04/test-comments/" title="test comments">test comments</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/2023-10/" title="In 2023/10">2023/10</a>
+</div>
+
+    <span><a href="/2023/10/08/update-news-1/" title="update news 1">update news 1</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">夏夏 @ 陶初夏的小窝</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: 'categories/2023-10/page/2/',
+    favicon: {
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,fancybox: true,
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
 </body>
 </html>

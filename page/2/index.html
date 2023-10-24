@@ -1,740 +1,617 @@
 
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>陶初夏の个人博客</title>
-    <meta name="author" content="夏夏" />
-    <meta name="description" content="让世界为奇迹倾倒！" />
-    <meta name="keywords" content="code Genshin" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <link rel="icon" href="/images/wife2.jpg" />
-    <link rel="preconnect" href="https://cdn.staticfile.org" />
-<script src="https://cdn.staticfile.org/vue/3.3.4/vue.global.prod.min.js"></script>
-<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.0/css/all.min.css" />
-<link rel="preconnect" href="https://fonts.loli.net" />
-<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
-<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
-<script> const mixins = {}; </script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 
-<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
 
 
-<script src="https://cdn.staticfile.org/highlight.js/11.8.0/highlight.min.js"></script>
-<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
-<link
-    rel="stylesheet"
-    href="https://cdn.staticfile.org/highlight.js/11.8.0/styles/github.min.css"
-/>
-<script src="/js/lib/highlight.js"></script>
+<link rel="alternate" type="application/rss+xml" title="陶初夏の个人博客" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="陶初夏の个人博客" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="陶初夏の个人博客" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+
+<link rel="canonical" href="http://example.com/page/2/">
 
 
 
-<script src="/js/lib/preview.js"></script>
-
-
-
-
-
-<script src="/js/lib/home.js"></script>
-
-<link rel="stylesheet" href="/css/main.css" />
-
+  <title>陶初夏的小窝 = 陶初夏の个人博客</title>
 <meta name="generator" content="Hexo 6.3.0"></head>
-<body>
-    <div id="layout">
-        <transition name="fade">
-            <div id="loading" v-show="loading">
-                <div id="loading-circle">
-                    <h2>LOADING</h2>
-                    <p>加载过慢请开启缓存 浏览器默认开启</p>
-                    <img src="/images/wife2.jpg" />
-                </div>
-            </div>
-        </transition>
-        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
-    <nav id="desktop-menu">
-        <a class="title" href="/">
-            <span>陶初夏の个人博客</span>
-        </a>
-        
-        <a href="/">
-            <i class="fa-solid fa-house fa-fw"></i>
-            <span>&ensp;Home</span>
-        </a>
-        
-        <a href="/about">
-            <i class="fa-solid fa-id-card fa-fw"></i>
-            <span>&ensp;About</span>
-        </a>
-        
-        <a href="/archives">
-            <i class="fa-solid fa-box-archive fa-fw"></i>
-            <span>&ensp;Archives</span>
-        </a>
-        
-        <a href="/categories">
-            <i class="fa-solid fa-bookmark fa-fw"></i>
-            <span>&ensp;Categories</span>
-        </a>
-        
-        <a href="/tags">
-            <i class="fa-solid fa-tags fa-fw"></i>
-            <span>&ensp;Tags</span>
-        </a>
-        
-    </nav>
-    <nav id="mobile-menu">
-        <div class="title" @click="showMenuItems = !showMenuItems">
-            <i class="fa-solid fa-bars fa-fw"></i>
-            <span>&emsp;陶初夏の个人博客</span>
-        </div>
-        <transition name="slide">
-            <div class="items" v-show="showMenuItems">
-                
-                <a href="/">
-                    <div class="item">
-                        <div style="min-width: 20px; max-width: 50px; width: 10%">
-                            <i class="fa-solid fa-house fa-fw"></i>
-                        </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
-                    </div>
-                </a>
-                
-                <a href="/about">
-                    <div class="item">
-                        <div style="min-width: 20px; max-width: 50px; width: 10%">
-                            <i class="fa-solid fa-id-card fa-fw"></i>
-                        </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
-                    </div>
-                </a>
-                
-                <a href="/archives">
-                    <div class="item">
-                        <div style="min-width: 20px; max-width: 50px; width: 10%">
-                            <i class="fa-solid fa-box-archive fa-fw"></i>
-                        </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
-                    </div>
-                </a>
-                
-                <a href="/categories">
-                    <div class="item">
-                        <div style="min-width: 20px; max-width: 50px; width: 10%">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
-                    </div>
-                </a>
-                
-                <a href="/tags">
-                    <div class="item">
-                        <div style="min-width: 20px; max-width: 50px; width: 10%">
-                            <i class="fa-solid fa-tags fa-fw"></i>
-                        </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
-                    </div>
-                </a>
-                
-            </div>
-        </transition>
-    </nav>
-</div>
-<transition name="fade">
-    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
-</transition>
-
-        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div id="home-head">
-    <div id="home-background" ref="homeBackground" data-images="/images/wife3.jpg"></div>
-    <div id="home-info" @click="homeClick">
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="info">
-            <div class="wrap">
-                <h1>陶初夏の个人博客</h1>
-                <h3></h3>
-                <h5>让世界为奇迹倾倒！</h5>
-            </div>
-        </span>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
     </div>
-</div>
-<div id="home-posts-wrap" true ref="homePostsWrap">
-    <div id="home-posts">
-        
-
-<div class="post">
-    <a href="/2023/10/05/%E9%93%B8%E5%B8%81%E6%95%B0%E6%8D%AE/">
-        <h2 class="post-title">铸币数据</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="category">
-            <a href="/categories/2023-10/">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                2023/10
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+            <a href="/" class="logo" rel="start"><p class="artboard">陶初夏的小窝</p>
+              <h1 itemprop="name headline" class="title">陶初夏の个人博客</h1>
             </a>
-        </span>
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2023/10/5
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <p>​	今天真是无语死了，T2数据居然有非法状态。然后T4我乍一看好简单， 直接快速把它给秒了。上洛谷一看， 还是个紫题， 直接狂喜：这不是白送经验吗？ 结果考完才发现看错题了。。。。。。不过T3本来在洛谷上只有96分的， 结果在lemon测完AC了， <del>实力太强</del>运气太好了。</p>
-<p>​	晚上学习了<del>平板电视</del>pbds， 总算是弥补了我平衡树方面的短板。</p>
-<p></p>
-
-            
+          
+          </div>
         </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
     </div>
-    <div class="post-tags">
-        
-        <span class="icon">
-            <i class="fa-solid fa-tags fa-fw"></i>
-        </span>
-        
-        
-        
-        <span class="tag">
-            
-            <a href="/tags/others/" style="color: #00bcd4">others</a>
-        </span>
-        
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">陶初夏的小窝</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://github.com/taochuxiaxia/test/blob/main/wife6.jpg?raw=true"></li>
+          <li class="item" data-background-image="https://github.com/taochuxiaxia/test/blob/main/wife10.jpg?raw=true"></li>
+          <li class="item" data-background-image="https://github.com/taochuxiaxia/test/blob/main/OIP-C.jpg?raw=true"></li>
+          <li class="item" data-background-image="https://github.com/taochuxiaxia/test/blob/main/tuopa.jpg?raw=true"></li>
+          <li class="item" data-background-image="https://github.com/taochuxiaxia/test/blob/main/wife8.jpg?raw=true"></li>
+          <li class="item" data-background-image="https://github.com/taochuxiaxia/test/blob/main/wife15.jpg?raw=true"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
     </div>
-    <a href="/2023/10/05/%E9%93%B8%E5%B8%81%E6%95%B0%E6%8D%AE/" class="go-post">阅读全文</a>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="index wrap">
+    <div class="segments posts">
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/10/05/%E9%93%B8%E5%B8%81%E6%95%B0%E6%8D%AE/" itemprop="url" title="铸币数据"><img data-src="https://github.com/taochuxiaxia/test/blob/main/wife10.jpg?raw=true"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="Created: 2023-10-05 20:29:07">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-10-05T20:29:07+08:00">2023-10-05</time>
+  </span>
 </div>
 
-<div class="post">
-    <a href="/2023/10/04/2023-10-04-%E6%80%BB%E7%BB%93/">
-        <h2 class="post-title">2023-10-04 总结</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="category">
-            <a href="/categories/2023-10/">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                2023/10
-            </a>
-        </span>
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2023/10/4
-        </span>
-        
-        
+    <h3><a href="/2023/10/05/%E9%93%B8%E5%B8%81%E6%95%B0%E6%8D%AE/" itemprop="url" title="铸币数据">铸币数据</a></h3>
+    <div class="excerpt">
+        ​	今天真是无语死了，T2 数据居然有非法状态。然后 T4 我乍一看好简单， 直接快速把它给秒了。上洛谷一看， 还是个紫题， 直接狂喜：这不是白送经验吗？ 结果考完才发现看错题了。。。。。。不过 T3 本来在洛谷上只有 96 分的， 结果在 lemon 测完 AC 了， 实力太强运气太好了。
+​	晚上学习了平板电视 pbds， 总算是弥补了我平衡树方面的短板。
     </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <h1 id="10月4日总结"><a href="#10月4日总结" class="headerlink" title="10月4日总结"></a>10月4日总结</h1><table>
-<thead>
-<tr>
-<th>题目</th>
-<th>预估</th>
-<th>实际</th>
-<th>差值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><a target="_blank" rel="noopener" href="http://10.0.247.99/problem.php?cid=1207&pid=0">周年纪念晚会</a></td>
-<td>100</td>
-<td>100</td>
-<td>0</td>
-</tr>
-<tr>
-<td><a target="_blank" rel="noopener" href="http://10.0.247.99/problem.php?cid=1207&pid=1">叶子的染色</a></td>
-<td>100</td>
-<td>100</td>
-<td>0</td>
-</tr>
-<tr>
-<td><a target="_blank" rel="noopener" href="http://10.0.247.99/problem.php?cid=1207&pid=2">数字游戏2</a></td>
-<td>100</td>
-<td>100</td>
-<td>0</td>
-</tr>
-<tr>
-<td>[ <a target="_blank" rel="noopener" href="http://10.0.247.99/problem.php?cid=1207&pid=3">SCOI2009]Windy 数</a></td>
-<td>100</td>
-<td>100</td>
-<td>0</td>
-</tr>
-</tbody></table>
-<h1 id="T1"><a href="#T1" class="headerlink" title="T1"></a>T1</h1><p>​	这就是一道树形dp的板题， 一个大法师就好了， 代码就没必要放了</p>
-<hr>
-<h1 id="T2"><a href="#T2" class="headerlink" title="T2"></a>T2</h1><p>​	这就是第一题稍微变一点点， 直接上代码吧。</p>
-<pre><code class="c++">//
+    <div class="meta footer">
+      <span>
+        <a href="/categories/2023-10/" itemprop="url" title="2023&#x2F;10"><i class="ic i-flag"></i>2023/10</a>
+      </span>
+    </div>
+    <a href="/2023/10/05/%E9%93%B8%E5%B8%81%E6%95%B0%E6%8D%AE/" itemprop="url" title="铸币数据" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/10/04/2023-10-04-%E6%80%BB%E7%BB%93/" itemprop="url" title="2023-10-04 总结"><img data-src="https://github.com/taochuxiaxia/test/blob/main/wife8.jpg?raw=true"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="Created: 2023-10-04 19:08:01">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-10-04T19:08:01+08:00">2023-10-04</time>
+  </span>
+</div>
+
+    <h3><a href="/2023/10/04/2023-10-04-%E6%80%BB%E7%BB%93/" itemprop="url" title="2023-10-04 总结">2023-10-04 总结</a></h3>
+    <div class="excerpt">
+        # 10 月 4 日总结
+
+题目
+预估
+实际
+差值
+
+周年纪念晚会
+100
+100
+0
+
+叶子的染色
+100
+100
+0
+
+数字游戏 2
+100
+100
+0
+
+[ SCOI2009] Windy 数
+100
+100
+0
+
+# T1
+​	这就是一道树形 dp 的板题， 一个大法师就好了， 代码就没必要放了
+
+# T2
+​	这就是第一题稍微变一点点， 直接上代码吧。
+//
 // Created by 96454 on 2023/10/4.
 //
-#include &lt;bits/stdc++.h&gt;
+#include &amp;lt;bits/stdc++.h&amp;gt;
 using namespace std;
-#define int long long
-const int N = 1e4 + 10;
-const int INF = 2147483647;
-vector &lt;int&gt; ver[N];
-int m,n,c[N];
-int root,num;
-int f[N][2];
+#define int long...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/2023-10/" itemprop="url" title="2023&#x2F;10"><i class="ic i-flag"></i>2023/10</a>
+      </span>
+    </div>
+    <a href="/2023/10/04/2023-10-04-%E6%80%BB%E7%BB%93/" itemprop="url" title="2023-10-04 总结" class="btn">more...</a>
+  </div>
+</article>
 
-template &lt;typename T&gt; inline void read(T &amp;x)&#123;
-    int w = 1;char s;x = 0;
-    while (!isdigit(s = getchar())) s = &#39;-&#39;;
-    while (isdigit(s)) x = (x &lt;&lt; 3) + (x &lt;&lt; 1), x += s - &#39;0&#39;, s = getchar();
-    x *= w;
-&#125;
-inline void add(int u,int v)
-&#123;
-    ver[u].push_back(v);
-&#125;
-void dfs(int u,int fa)
-&#123;
-    if(u&lt;=n) return ;
-    for(auto v : ver[u])
-        if(v != fa)
-        &#123;
-            dfs(v,u);
-            f[u][0]+=min(f[v][0]-1,f[v][1]);
-            f[u][1]+=min(f[v][1]-1,f[v][0]);
-        &#125;
-&#125;
-signed main()
-&#123;
-    read(m);read(n);
-    root = n+1;
-    for(int i = 1; i &lt;= n; i++) read(c[i]);
-    for(int i=1, u, v;i&lt;=m-1;i++)
-    &#123;
-        read(u);read(v);
-        add(u,v),add(v,u);
-    &#125;
-    for(int i=1;i&lt;=m;i++)
-    &#123;
-        f[i][0]=f[i][1]=1;
-        if(i&lt;=n) f[i][(!c[i])]=INF;
-    &#125;
-    dfs(root,root);
-    printf(&quot;%lld&quot;,min(f[root][0],f[root][1]));
-&#125;
-</code></pre>
-<hr>
-<h1 id="T3"><a href="#T3" class="headerlink" title="T3"></a>T3</h1><p>​	这是一道显然的数位dp，  就是不用dfs太难写啦！</p>
-<pre><code class="c++">//
-// Created by 96454 on 2023/10/4.
-//
-#include &lt;bits/stdc++.h&gt;
-using namespace std;
-const int N = 12, M = 102;
-int f[N][10][M], p, l, r;
-int dp(int x)&#123;
-    if(x == 0) return 1;
-    int ans = 0, last = 0;
-    vector&lt;int&gt; a;
-    while(x) a.push_back(x % 10), x /= 10;
-    int la = a.size()-1;
-    for(int i = la; i &gt;= 0; --i)&#123;
-        int xx =a[i];
-        for(int j = 0; j&lt;xx; j++)
-            ans += f[i+1][j][((-last) % p + p) % p];
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/10/04/test-comments/" itemprop="url" title="test comments"><img data-src="https://github.com/taochuxiaxia/test/blob/main/wife10.jpg?raw=true"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="Created: 2023-10-04 18:19:01">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-10-04T18:19:01+08:00">2023-10-04</time>
+  </span>
+</div>
 
-        last += xx;
-        if(!i &amp;&amp; last % p == 0) ans ++;
-    &#125;
-    return ans;
-&#125;
-int main()&#123;
-    while (cin &gt;&gt; l &gt;&gt; r &gt;&gt; p)&#123;
-        memset(f,0,sizeof f);
-        for(int i = 0; i&lt;=9; i++) f[1][i][i%p]++;
-        for(int i = 2; i&lt;N; i++)
-            for(int j = 0; j&lt;=9; j++)
-                for(int k = 0; k&lt;p; k++)
-                    for(int x = 0; x&lt;=9; x++)
-                        f[i][j][k] += f[i-1][x][((k - j) % p + p) % p];
-        printf(&quot;%d\n&quot;, dp(r) - dp(l - 1));
-    &#125;
-    return 0;
-&#125;
-</code></pre>
-<hr>
-<h1 id="T4"><a href="#T4" class="headerlink" title="T4"></a>T4</h1><p>​	这道题是考过的原题， 一眼数位dp</p>
-<pre><code class="c++">//
-// Created by 96454 on 2023/10/4.
-//
-#include &lt;bits/stdc++.h&gt;
-using namespace std;
+    <h3><a href="/2023/10/04/test-comments/" itemprop="url" title="test comments">test comments</a></h3>
+    <div class="excerpt">
+        ​	留言测试:
+&amp;lt;script...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/2023-10/" itemprop="url" title="2023&#x2F;10"><i class="ic i-flag"></i>2023/10</a>
+      </span>
+    </div>
+    <a href="/2023/10/04/test-comments/" itemprop="url" title="test comments" class="btn">more...</a>
+  </div>
+</article>
 
-vector &lt;int&gt;dim;
-int f[110][100];
-int dfs(int x, int st, int op)
-&#123;
-    if (!x) return 1;
-    if (!op &amp;&amp; ~f[x][st]) return f[x][st];
-    int maxx = op ? dim[x] : 9, ret = 0;
-    for (int i = 0; i &lt;= maxx; i++) &#123;
-        if (abs(st - i) &lt; 2) continue;
-        if (st == 11 &amp;&amp; i == 0)
-            ret += dfs(x - 1, 11, op &amp; (i == maxx));
-        else
-            ret += dfs(x - 1, i, op &amp; (i == maxx));
-    &#125;
-    if (!op) f[x][st] = ret;
-    return ret;
-&#125;
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/10/04/Celebrate/" itemprop="url" title="Celebrate"><img data-src="https://github.com/taochuxiaxia/test/blob/main/OIP-C.jpg?raw=true"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="Created: 2023-10-04 16:55:12">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-10-04T16:55:12+08:00">2023-10-04</time>
+  </span>
+</div>
 
-int solve(int x) &#123;
-    memset(f, -1, sizeof f);
-    dim.clear();
-    dim.push_back(-1);
-    int t = x;
-    while (x) &#123;
-        dim.push_back(x % 10);
-        x /= 10;
-    &#125;
-    return dfs(dim.size() - 1, 11, 1);
-&#125;
-int main()&#123;
-    int a, b;
-    scanf(&quot;%d%d&quot;, &amp;a, &amp;b);
-    printf(&quot;%d&quot;, solve(b) - solve(a - 1));
-&#125;
-</code></pre>
-<hr>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>​	今天的题都能够一眼看出题目考点， 只要之前没走神就可以随便AK</p>
-<script>
+    <h3><a href="/2023/10/04/Celebrate/" itemprop="url" title="Celebrate">Celebrate</a></h3>
+    <div class="excerpt">
+        ​	庆祝在不懈努力后我成功配置好了我博客的绝大部分！
+​	顺便测试一下评论能不能用叭
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/2023-10/" itemprop="url" title="2023&#x2F;10"><i class="ic i-flag"></i>2023/10</a>
+      </span>
+    </div>
+    <a href="/2023/10/04/Celebrate/" itemprop="url" title="Celebrate" class="btn">more...</a>
+  </div>
+</article>
 
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/10/04/test-four-floor/" itemprop="url" title="test four floor"><img data-src="https://github.com/taochuxiaxia/test/blob/main/wife10.jpg?raw=true"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="Created: 2023-10-04 11:32:59">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-10-04T11:32:59+08:00">2023-10-04</time>
+  </span>
+</div>
+
+    <h3><a href="/2023/10/04/test-four-floor/" itemprop="url" title="test four floor">test four floor</a></h3>
+    <div class="excerpt">
+        ​	庆祝我的博客成功入驻四楼竞赛机房
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/2023-10/" itemprop="url" title="2023&#x2F;10"><i class="ic i-flag"></i>2023/10</a>
+      </span>
+    </div>
+    <a href="/2023/10/04/test-four-floor/" itemprop="url" title="test four floor" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/10/04/hello-world/" itemprop="url" title="Hello World"><img data-src="https://github.com/taochuxiaxia/test/blob/main/wife6.jpg?raw=true"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="Created: 2023-10-04 11:24:33">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-10-04T11:24:33+08:00">2023-10-04</time>
+  </span>
+</div>
+
+    <h3><a href="/2023/10/04/hello-world/" itemprop="url" title="Hello World">Hello World</a></h3>
+    <div class="excerpt">
+        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+# Quick Start
+# Create a new post
+h$ hexo new &quot;My New Post&quot;More info: Writing
+# Run server
+h$...
+    </div>
+    <a href="/2023/10/04/hello-world/" itemprop="url" title="Hello World" class="btn">more...</a>
+  </div>
+</article>
+
+    </div>
+
+  </div>
+
+  
+  <nav class="pagination">
+    <div class="inner">
+    <a class="extend prev" rel="prev" href="/"><i class="ic i-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </div>
+  </nav>
+
+
+
+        </div>
+        <div id="sidebar">
+          
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+      </div>
+      <div class="related panel pjax" data-title="Related">
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="夏夏"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">夏夏</p>
+  <div class="description" itemprop="description">让世界为奇迹倾倒！</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">16</span>
+        <span class="name">posts</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">1</span>
+        <span class="name">categories</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">7</span>
+        <span class="name">tags</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3Rhb2NodXhpYXhpYQ==" title="https:&#x2F;&#x2F;github.com&#x2F;taochuxiaxia"><i class="ic i-github"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>About</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>Archives</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>Categories</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>Tags</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>links</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/2023-10/" title="In 2023/10">2023/10</a>
+</div>
+
+    <span><a href="/2023/10/04/test-comments/" title="test comments">test comments</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/2023-10/" title="In 2023/10">2023/10</a>
+</div>
+
+    <span><a href="/2023/10/12/%E4%BB%8A%E6%97%A5%E4%B8%80%E8%A8%802/" title="今日一言2">今日一言2</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/2023-10/" title="In 2023/10">2023/10</a>
+</div>
+
+    <span><a href="/2023/10/09/%E5%85%B3%E4%BA%8E%E6%88%91%E4%BB%AC%E6%8D%A2%E4%BA%86%E6%96%B0oj%E8%BF%99%E5%9B%9E%E4%BA%8B/" title="关于我们换了新oj这回事">关于我们换了新oj这回事</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/2023-10/" title="In 2023/10">2023/10</a>
+</div>
+
+    <span><a href="/2023/10/06/Further-Aid/" title="Further Aid">Further Aid</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/2023-10/" title="In 2023/10">2023/10</a>
+</div>
+
+    <span><a href="/2023/10/13/%E5%B8%AE%E5%B8%AE%E6%88%91%EF%BC%8C-oier%E5%85%88%E7%94%9F/" title="帮帮我， oier先生">帮帮我， oier先生</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/2023-10/" title="In 2023/10">2023/10</a>
+</div>
+
+    <span><a href="/2023/10/04/2023-10-04-%E6%80%BB%E7%BB%93/" title="2023-10-04 总结">2023-10-04 总结</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/2023-10/" title="In 2023/10">2023/10</a>
+</div>
+
+    <span><a href="/2023/10/05/%E9%93%B8%E5%B8%81%E6%95%B0%E6%8D%AE/" title="铸币数据">铸币数据</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/2023-10/" title="In 2023/10">2023/10</a>
+</div>
+
+    <span><a href="/2023/10/09/%E4%BB%8A%E6%97%A5%E4%B8%80%E8%A8%80/" title="今日一言">今日一言</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/2023-10/" title="In 2023/10">2023/10</a>
+</div>
+
+    <span><a href="/2023/10/15/update-news-2/" title="update-news-2">update-news-2</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/2023-10/" title="In 2023/10">2023/10</a>
+</div>
+
+    <span><a href="/2023/10/10/%E4%BB%8A%E6%97%A5%E4%B8%80%E8%A8%801/" title="今日一言">今日一言</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">夏夏 @ 陶初夏的小窝</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: 'page/2/',
+    favicon: {
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,fancybox: true,
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
 </script>
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        <span class="icon">
-            <i class="fa-solid fa-tags fa-fw"></i>
-        </span>
-        
-        
-        
-        <span class="tag">
-            
-            <a href="/tags/code/" style="color: #00a596">code</a>
-        </span>
-        
-    </div>
-    <a href="/2023/10/04/2023-10-04-%E6%80%BB%E7%BB%93/" class="go-post">阅读全文</a>
-</div>
 
-<div class="post">
-    <a href="/2023/10/04/test-comments/">
-        <h2 class="post-title">test comments</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="category">
-            <a href="/categories/2023-10/">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                2023/10
-            </a>
-        </span>
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2023/10/4
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <p>​	留言测试:</p>
-<pre><code>&lt;script src=&quot;https://giscus.app/client.js&quot;
-    data-repo=&quot;taochuxiaxia/taochuxiaxia.github.io&quot;
-    data-repo-id=&quot;R_kgDOKa6Cjw&quot;
-    data-category=&quot;Announcements&quot;
-    data-category-id=&quot;DIC_kwDOKa6Cj84CZ2dD&quot;
-    data-mapping=&quot;pathname&quot;
-    data-strict=&quot;0&quot;
-    data-reactions-enabled=&quot;1&quot;
-    data-emit-metadata=&quot;0&quot;
-    data-input-position=&quot;bottom&quot;
-    data-theme=&quot;preferred_color_scheme&quot;
-    data-lang=&quot;zh-CN&quot;
-    crossorigin=&quot;anonymous&quot;
-    async&gt;
-</code></pre>
-<p></p>
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
 
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        <span class="icon">
-            <i class="fa-solid fa-tags fa-fw"></i>
-        </span>
-        
-        
-        
-        <span class="tag">
-            
-            <a href="/tags/others/" style="color: #00bcd4">others</a>
-        </span>
-        
-    </div>
-    <a href="/2023/10/04/test-comments/" class="go-post">阅读全文</a>
-</div>
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
 
-<div class="post">
-    <a href="/2023/10/04/Celebrate/">
-        <h2 class="post-title">Celebrate</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="category">
-            <a href="/categories/2023-10/">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                2023/10
-            </a>
-        </span>
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2023/10/4
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <p>​	庆祝在不懈努力后我成功配置好了我博客的绝大部分！</p>
-<p>​	顺便测试一下评论能不能用叭</p>
-
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        <span class="icon">
-            <i class="fa-solid fa-tags fa-fw"></i>
-        </span>
-        
-        
-        
-        <span class="tag">
-            
-            <a href="/tags/others/" style="color: #ff7d73">others</a>
-        </span>
-        
-    </div>
-    <a href="/2023/10/04/Celebrate/" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
-    <a href="/2023/10/04/test-four-floor/">
-        <h2 class="post-title">test four floor</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="category">
-            <a href="/categories/2023-10/">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                2023/10
-            </a>
-        </span>
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2023/10/4
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <p>​	庆祝我的博客成功入驻四楼竞赛机房</p>
-
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        <span class="icon">
-            <i class="fa-solid fa-tags fa-fw"></i>
-        </span>
-        
-        
-        
-        <span class="tag">
-            
-            <a href="/tags/others/" style="color: #00a596">others</a>
-        </span>
-        
-    </div>
-    <a href="/2023/10/04/test-four-floor/" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
-    <a href="/2023/10/04/hello-world/">
-        <h2 class="post-title">Hello World</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2023/10/4
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        <span class="icon">
-            <i class="fa-solid fa-tags fa-fw"></i>
-        </span>
-        
-        
-        
-        <span class="tag">
-            
-            <a href="/tags/others/" style="color: #03a9f4">others</a>
-        </span>
-        
-    </div>
-    <a href="/2023/10/04/hello-world/" class="go-post">阅读全文</a>
-</div>
+<script src="/js/app.js?v=0.2.5"></script>
 
 
-        <div class="page-current">
-    
-    <a class="page-num" href="/">
-        <i class="fa-solid fa-caret-left fa-fw"></i>
-    </a>
-    <a class="page-num" href="/">1</a>
-    <span class="page-omit">...</span>
-    
-    <span class="current">2</span>
-    
-    
-    
-    
-</div>
 
-    </div>
-    
-    <div id="home-card">
-        <div id="card-style">
-    <div id="card-div">
-        <div class="avatar">
-            <img src="/images/wife2.jpg" alt="avatar" />
-        </div>
-        <div class="name">夏夏</div>
-        <div class="description">
-            <p>让世界为奇迹倾倒！<br>…</p>
 
-        </div>
-        
-        
-        <div class="friend-links">
-            
-            <div class="friend-link">
-                <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/user/970336">洛谷</a>
-            </div>
-            
-            <div class="friend-link">
-                <a target="_blank" rel="noopener" href="https://kaneki0208.github.io">kaneki</a>
-            </div>
-            
-        </div>
-        
-    </div>
-</div>
-
-    </div>
-    
-</div>
-
-            <footer id="footer">
-    <div id="footer-wrap">
-        <div>
-            &copy;
-            2022 - 2023 陶初夏の个人博客
-            <span id="footer-icon">
-                <i class="fa-solid fa-font-awesome fa-fw"></i>
-            </span>
-            &commat;夏夏
-        </div>
-        <div>
-            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
-            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
-        </div>
-        
-    </div>
-</footer>
-
-        </div>
-        
-        <transition name="fade">
-            <div id="preview" ref="preview" v-show="previewShow">
-                <img id="preview-content" ref="previewContent" />
-            </div>
-        </transition>
-        
-    </div>
-    <script src="/js/main.js"></script>
-    
 </body>
 </html>

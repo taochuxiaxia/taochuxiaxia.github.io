@@ -1,192 +1,160 @@
 
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>2023-10-04 总结 | 陶初夏の个人博客</title>
-    <meta name="author" content="夏夏" />
-    <meta name="description" content="让世界为奇迹倾倒！" />
-    <meta name="keywords" content="code Genshin" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <link rel="icon" href="/images/wife2.jpg" />
-    <link rel="preconnect" href="https://cdn.staticfile.org" />
-<script src="https://cdn.staticfile.org/vue/3.3.4/vue.global.prod.min.js"></script>
-<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.0/css/all.min.css" />
-<link rel="preconnect" href="https://fonts.loli.net" />
-<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
-<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
-<script> const mixins = {}; </script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 
-<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
 
 
-<script src="https://cdn.staticfile.org/highlight.js/11.8.0/highlight.min.js"></script>
-<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
-<link
-    rel="stylesheet"
-    href="https://cdn.staticfile.org/highlight.js/11.8.0/styles/github.min.css"
-/>
-<script src="/js/lib/highlight.js"></script>
+<link rel="alternate" type="application/rss+xml" title="陶初夏の个人博客" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="陶初夏の个人博客" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="陶初夏の个人博客" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="代码" />
+
+
+<link rel="canonical" href="http://example.com/2023/10/04/2023-10-04-%E6%80%BB%E7%BB%93/">
 
 
 
-<script src="/js/lib/preview.js"></script>
-
-
-
-
-
-
-
-
-
-<link rel="stylesheet" href="/css/main.css" />
-
+  <title>
+2023-10-04 总结 - 2023/10 |
+陶初夏的小窝 = 陶初夏の个人博客</title>
 <meta name="generator" content="Hexo 6.3.0"></head>
-<body>
-    <div id="layout">
-        <transition name="fade">
-            <div id="loading" v-show="loading">
-                <div id="loading-circle">
-                    <h2>LOADING</h2>
-                    <p>加载过慢请开启缓存 浏览器默认开启</p>
-                    <img src="/images/wife2.jpg" />
-                </div>
-            </div>
-        </transition>
-        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
-    <nav id="desktop-menu">
-        <a class="title" href="/">
-            <span>陶初夏の个人博客</span>
-        </a>
-        
-        <a href="/">
-            <i class="fa-solid fa-house fa-fw"></i>
-            <span>&ensp;Home</span>
-        </a>
-        
-        <a href="/about">
-            <i class="fa-solid fa-id-card fa-fw"></i>
-            <span>&ensp;About</span>
-        </a>
-        
-        <a href="/archives">
-            <i class="fa-solid fa-box-archive fa-fw"></i>
-            <span>&ensp;Archives</span>
-        </a>
-        
-        <a href="/categories">
-            <i class="fa-solid fa-bookmark fa-fw"></i>
-            <span>&ensp;Categories</span>
-        </a>
-        
-        <a href="/tags">
-            <i class="fa-solid fa-tags fa-fw"></i>
-            <span>&ensp;Tags</span>
-        </a>
-        
-    </nav>
-    <nav id="mobile-menu">
-        <div class="title" @click="showMenuItems = !showMenuItems">
-            <i class="fa-solid fa-bars fa-fw"></i>
-            <span>&emsp;陶初夏の个人博客</span>
-        </div>
-        <transition name="slide">
-            <div class="items" v-show="showMenuItems">
-                
-                <a href="/">
-                    <div class="item">
-                        <div style="min-width: 20px; max-width: 50px; width: 10%">
-                            <i class="fa-solid fa-house fa-fw"></i>
-                        </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
-                    </div>
-                </a>
-                
-                <a href="/about">
-                    <div class="item">
-                        <div style="min-width: 20px; max-width: 50px; width: 10%">
-                            <i class="fa-solid fa-id-card fa-fw"></i>
-                        </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
-                    </div>
-                </a>
-                
-                <a href="/archives">
-                    <div class="item">
-                        <div style="min-width: 20px; max-width: 50px; width: 10%">
-                            <i class="fa-solid fa-box-archive fa-fw"></i>
-                        </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
-                    </div>
-                </a>
-                
-                <a href="/categories">
-                    <div class="item">
-                        <div style="min-width: 20px; max-width: 50px; width: 10%">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
-                    </div>
-                </a>
-                
-                <a href="/tags">
-                    <div class="item">
-                        <div style="min-width: 20px; max-width: 50px; width: 10%">
-                            <i class="fa-solid fa-tags fa-fw"></i>
-                        </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
-                    </div>
-                </a>
-                
-            </div>
-        </transition>
-    </nav>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">2023-10-04 总结
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2023-10-04 19:08:01">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2023-10-04T19:08:01+08:00">2023-10-04</time>
+  </span>
 </div>
-<transition name="fade">
-    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
-</transition>
 
-        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div class="article">
-    <div>
-        <h1>2023-10-04 总结</h1>
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
     </div>
-    <div class="info">
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2023/10/4
-        </span>
-        
-        <span class="category">
-            <a href="/categories/2023-10/">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                2023/10
-            </a>
-        </span>
-        
-        
-        <span class="tags">
-            <span class="icon">
-                <i class="fa-solid fa-tags fa-fw"></i>
-            </span>
-            
-            
-            <span class="tag">
-                
-                <a href="/tags/code/" style="color: #00a596">code</a>
-            </span>
-            
-        </span>
-        
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">陶初夏的小窝</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://github.com/taochuxiaxia/test/blob/main/tuopa.jpg?raw=true"></li>
+          <li class="item" data-background-image="https://github.com/taochuxiaxia/test/blob/main/wife15.jpg?raw=true"></li>
+          <li class="item" data-background-image="https://github.com/taochuxiaxia/test/blob/main/wife8.jpg?raw=true"></li>
+          <li class="item" data-background-image="https://github.com/taochuxiaxia/test/blob/main/OIP-C.jpg?raw=true"></li>
+          <li class="item" data-background-image="https://github.com/taochuxiaxia/test/blob/main/wife10.jpg?raw=true"></li>
+          <li class="item" data-background-image="https://github.com/taochuxiaxia/test/blob/main/wife6.jpg?raw=true"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
     </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
     
-    <div class="content" v-pre>
-        <h1 id="10月4日总结"><a href="#10月4日总结" class="headerlink" title="10月4日总结"></a>10月4日总结</h1><table>
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">Home</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/2023-10/" itemprop="item" rel="index" title="In 2023/10"><span itemprop="name">2023/10</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/04/2023-10-04-%E6%80%BB%E7%BB%93/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="夏夏">
+    <meta itemprop="description" content=", 让世界为奇迹倾倒！">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="陶初夏の个人博客">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="10月4日总结"><a class="markdownIt-Anchor" href="#10月4日总结">#</a> 10 月 4 日总结</h1>
+<table>
 <thead>
 <tr>
 <th>题目</th>
@@ -195,35 +163,39 @@
 <th>差值</th>
 </tr>
 </thead>
-<tbody><tr>
-<td><a target="_blank" rel="noopener" href="http://10.0.247.99/problem.php?cid=1207&pid=0">周年纪念晚会</a></td>
+<tbody>
+<tr>
+<td><span class="exturl" data-url="aHR0cDovLzEwLjAuMjQ3Ljk5L3Byb2JsZW0ucGhwP2NpZD0xMjA3JmFtcDtwaWQ9MA==">周年纪念晚会</span></td>
 <td>100</td>
 <td>100</td>
 <td>0</td>
 </tr>
 <tr>
-<td><a target="_blank" rel="noopener" href="http://10.0.247.99/problem.php?cid=1207&pid=1">叶子的染色</a></td>
+<td><span class="exturl" data-url="aHR0cDovLzEwLjAuMjQ3Ljk5L3Byb2JsZW0ucGhwP2NpZD0xMjA3JmFtcDtwaWQ9MQ==">叶子的染色</span></td>
 <td>100</td>
 <td>100</td>
 <td>0</td>
 </tr>
 <tr>
-<td><a target="_blank" rel="noopener" href="http://10.0.247.99/problem.php?cid=1207&pid=2">数字游戏2</a></td>
+<td><span class="exturl" data-url="aHR0cDovLzEwLjAuMjQ3Ljk5L3Byb2JsZW0ucGhwP2NpZD0xMjA3JmFtcDtwaWQ9Mg==">数字游戏 2</span></td>
 <td>100</td>
 <td>100</td>
 <td>0</td>
 </tr>
 <tr>
-<td>[ <a target="_blank" rel="noopener" href="http://10.0.247.99/problem.php?cid=1207&pid=3">SCOI2009]Windy 数</a></td>
+<td>[ <span class="exturl" data-url="aHR0cDovLzEwLjAuMjQ3Ljk5L3Byb2JsZW0ucGhwP2NpZD0xMjA3JmFtcDtwaWQ9Mw==">SCOI2009] Windy 数</span></td>
 <td>100</td>
 <td>100</td>
 <td>0</td>
 </tr>
-</tbody></table>
-<h1 id="T1"><a href="#T1" class="headerlink" title="T1"></a>T1</h1><p>​	这就是一道树形dp的板题， 一个大法师就好了， 代码就没必要放了</p>
+</tbody>
+</table>
+<h1 id="t1"><a class="markdownIt-Anchor" href="#t1">#</a> T1</h1>
+<p>​	这就是一道树形 dp 的板题， 一个大法师就好了， 代码就没必要放了</p>
 <hr>
-<h1 id="T2"><a href="#T2" class="headerlink" title="T2"></a>T2</h1><p>​	这就是第一题稍微变一点点， 直接上代码吧。</p>
-<pre><code class="c++">//
+<h1 id="t2"><a class="markdownIt-Anchor" href="#t2">#</a> T2</h1>
+<p>​	这就是第一题稍微变一点点， 直接上代码吧。</p>
+<pre><code class="language-c++">//
 // Created by 96454 on 2023/10/4.
 //
 #include &lt;bits/stdc++.h&gt;
@@ -238,8 +210,8 @@ int f[N][2];
 
 template &lt;typename T&gt; inline void read(T &amp;x)&#123;
     int w = 1;char s;x = 0;
-    while (!isdigit(s = getchar())) s = &#39;-&#39;;
-    while (isdigit(s)) x = (x &lt;&lt; 3) + (x &lt;&lt; 1), x += s - &#39;0&#39;, s = getchar();
+    while (!isdigit(s = getchar())) s = '-';
+    while (isdigit(s)) x = (x &lt;&lt; 3) + (x &lt;&lt; 1), x += s - '0', s = getchar();
     x *= w;
 &#125;
 inline void add(int u,int v)
@@ -277,8 +249,9 @@ signed main()
 &#125;
 </code></pre>
 <hr>
-<h1 id="T3"><a href="#T3" class="headerlink" title="T3"></a>T3</h1><p>​	这是一道显然的数位dp，  就是不用dfs太难写啦！</p>
-<pre><code class="c++">//
+<h1 id="t3"><a class="markdownIt-Anchor" href="#t3">#</a> T3</h1>
+<p>​	这是一道显然的数位 dp，  就是不用 dfs 太难写啦！</p>
+<pre><code class="language-c++">//
 // Created by 96454 on 2023/10/4.
 //
 #include &lt;bits/stdc++.h&gt;
@@ -316,8 +289,9 @@ int main()&#123;
 &#125;
 </code></pre>
 <hr>
-<h1 id="T4"><a href="#T4" class="headerlink" title="T4"></a>T4</h1><p>​	这道题是考过的原题， 一眼数位dp</p>
-<pre><code class="c++">//
+<h1 id="t4"><a class="markdownIt-Anchor" href="#t4">#</a> T4</h1>
+<p>​	这道题是考过的原题， 一眼数位 dp</p>
+<pre><code class="language-c++">//
 // Created by 96454 on 2023/10/4.
 //
 #include &lt;bits/stdc++.h&gt;
@@ -359,75 +333,378 @@ int main()&#123;
 &#125;
 </code></pre>
 <hr>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>​	今天的题都能够一眼看出题目考点， 只要之前没走神就可以随便AK</p>
+<h1 id="总结"><a class="markdownIt-Anchor" href="#总结">#</a> 总结</h1>
+<p>​	今天的题都能够一眼看出题目考点， 只要之前没走神就可以随便 AK</p>
 <script>
-
 </script>
-    </div>
-    
-    
-    
-    
-    <div id="comment">
-        <div id="giscus-container" class="giscus"></div>
-    </div>
-    
-    
-    
-    
+      <div class="tags">
+          <a href="/tags/%E4%BB%A3%E7%A0%81/" rel="tag"><i class="ic i-tag"></i> 代码</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2023-10-24 08:50:04" itemprop="dateModified" datetime="2023-10-24T08:50:04+08:00">2023-10-24</time>
+  </span>
 </div>
 
-            <footer id="footer">
-    <div id="footer-wrap">
-        <div>
-            &copy;
-            2022 - 2023 陶初夏の个人博客
-            <span id="footer-icon">
-                <i class="fa-solid fa-font-awesome fa-fw"></i>
-            </span>
-            &commat;夏夏
-        </div>
-        <div>
-            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
-            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
-        </div>
-        
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> Donate</button>
+  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="夏夏 WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="夏夏 Alipay">
+        <p>Alipay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="夏夏 PayPal">
+        <p>PayPal</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>夏夏 <i class="ic i-at"><em>@</em></i>陶初夏の个人博客
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="http://example.com/2023/10/04/2023-10-04-%E6%80%BB%E7%BB%93/" title="2023-10-04 总结">http://example.com/2023/10/04/2023-10-04-总结/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2023/10/04/test-comments/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;github.com&#x2F;taochuxiaxia&#x2F;test&#x2F;blob&#x2F;main&#x2F;wife8.jpg?raw&#x3D;true" title="test comments">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> 2023/10</span>
+  <h3>test comments</h3>
+  </a>
+
     </div>
-</footer>
+    <div class="item right">
+      
+
+  <a href="/2023/10/05/%E9%93%B8%E5%B8%81%E6%95%B0%E6%8D%AE/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;github.com&#x2F;taochuxiaxia&#x2F;test&#x2F;blob&#x2F;main&#x2F;wife8.jpg?raw&#x3D;true" title="铸币数据">
+  <span class="type">Next Post</span>
+  <span class="category"><i class="ic i-flag"></i> 2023/10</span>
+  <h3>铸币数据</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
 
         </div>
-        
-        <transition name="fade">
-            <div id="preview" ref="preview" v-show="previewShow">
-                <img id="preview-content" ref="previewContent" />
-            </div>
-        </transition>
-        
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#10%E6%9C%884%E6%97%A5%E6%80%BB%E7%BB%93"><span class="toc-number">1.</span> <span class="toc-text"> 10 月 4 日总结</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#t1"><span class="toc-number">2.</span> <span class="toc-text"> T1</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#t2"><span class="toc-number">3.</span> <span class="toc-text"> T2</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#t3"><span class="toc-number">4.</span> <span class="toc-text"> T3</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#t4"><span class="toc-number">5.</span> <span class="toc-text"> T4</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">6.</span> <span class="toc-text"> 总结</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="Related">
+        <ul>
+          <li><a href="/2023/10/04/test-four-floor/" rel="bookmark" title="test four floor">test four floor</a></li><li><a href="/2023/10/04/Celebrate/" rel="bookmark" title="Celebrate">Celebrate</a></li><li><a href="/2023/10/04/test-comments/" rel="bookmark" title="test comments">test comments</a></li><li class="active"><a href="/2023/10/04/2023-10-04-%E6%80%BB%E7%BB%93/" rel="bookmark" title="2023-10-04 总结">2023-10-04 总结</a></li><li><a href="/2023/10/05/%E9%93%B8%E5%B8%81%E6%95%B0%E6%8D%AE/" rel="bookmark" title="铸币数据">铸币数据</a></li><li><a href="/2023/10/06/Further-Aid/" rel="bookmark" title="Further Aid">Further Aid</a></li><li><a href="/2023/10/06/fight/" rel="bookmark" title="fight">fight</a></li><li><a href="/2023/10/08/update-news-1/" rel="bookmark" title="update news 1">update news 1</a></li><li><a href="/2023/10/09/%E4%BB%8A%E6%97%A5%E4%B8%80%E8%A8%80/" rel="bookmark" title="今日一言">今日一言</a></li><li><a href="/2023/10/09/%E5%85%B3%E4%BA%8E%E6%88%91%E4%BB%AC%E6%8D%A2%E4%BA%86%E6%96%B0oj%E8%BF%99%E5%9B%9E%E4%BA%8B/" rel="bookmark" title="关于我们换了新oj这回事">关于我们换了新oj这回事</a></li><li><a href="/2023/10/10/%E4%BB%8A%E6%97%A5%E4%B8%80%E8%A8%801/" rel="bookmark" title="今日一言">今日一言</a></li><li><a href="/2023/10/12/%E4%BB%8A%E6%97%A5%E4%B8%80%E8%A8%802/" rel="bookmark" title="今日一言2">今日一言2</a></li><li><a href="/2023/10/13/%E5%B8%AE%E5%B8%AE%E6%88%91%EF%BC%8C-oier%E5%85%88%E7%94%9F/" rel="bookmark" title="帮帮我， oier先生">帮帮我， oier先生</a></li><li><a href="/2023/10/15/update-news-2/" rel="bookmark" title="update-news-2">update-news-2</a></li><li><a href="/2023/10/23/csp-s%E6%B8%B8%E8%AE%B0/" rel="bookmark" title="csp-s游记">csp-s游记</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="夏夏"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">夏夏</p>
+  <div class="description" itemprop="description">让世界为奇迹倾倒！</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">16</span>
+        <span class="name">posts</span>
+      </a>
     </div>
-    <script src="/js/main.js"></script>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">1</span>
+        <span class="name">categories</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">7</span>
+        <span class="name">tags</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3Rhb2NodXhpYXhpYQ==" title="https:&#x2F;&#x2F;github.com&#x2F;taochuxiaxia"><i class="ic i-github"></i></span>
+</div>
+
+<ul class="menu">
+  
     
-    
-<script
-    src="https://giscus.app/client.js"
-    data-repo="taochuxiaxia/taochuxiaxia.github.io"
-    data-repo-id="R_kgDOKa6Cjw"
-    data-category=""
-    data-category-id="DIC_kwDOKa6Cj84CZ2dD"
-    data-mapping="pathname"
-    data-strict="0"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="bottom"
-    data-theme="preferred_color_scheme"
-    data-lang="zh-CN"
-    crossorigin
-    async
-></script>
-
-
-
-
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+  </li>
 
     
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>About</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>Archives</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>Categories</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>Tags</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>links</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2023/10/04/test-comments/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2023/10/05/%E9%93%B8%E5%B8%81%E6%95%B0%E6%8D%AE/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/2023-10/" title="In 2023/10">2023/10</a>
+</div>
+
+    <span><a href="/2023/10/13/%E5%B8%AE%E5%B8%AE%E6%88%91%EF%BC%8C-oier%E5%85%88%E7%94%9F/" title="帮帮我， oier先生">帮帮我， oier先生</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/2023-10/" title="In 2023/10">2023/10</a>
+</div>
+
+    <span><a href="/2023/10/08/update-news-1/" title="update news 1">update news 1</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/2023-10/" title="In 2023/10">2023/10</a>
+</div>
+
+    <span><a href="/2023/10/04/test-four-floor/" title="test four floor">test four floor</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/2023-10/" title="In 2023/10">2023/10</a>
+</div>
+
+    <span><a href="/2023/10/09/%E5%85%B3%E4%BA%8E%E6%88%91%E4%BB%AC%E6%8D%A2%E4%BA%86%E6%96%B0oj%E8%BF%99%E5%9B%9E%E4%BA%8B/" title="关于我们换了新oj这回事">关于我们换了新oj这回事</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/2023-10/" title="In 2023/10">2023/10</a>
+</div>
+
+    <span><a href="/2023/10/12/%E4%BB%8A%E6%97%A5%E4%B8%80%E8%A8%802/" title="今日一言2">今日一言2</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/2023-10/" title="In 2023/10">2023/10</a>
+</div>
+
+    <span><a href="/2023/10/15/update-news-2/" title="update-news-2">update-news-2</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/2023-10/" title="In 2023/10">2023/10</a>
+</div>
+
+    <span><a href="/2023/10/04/test-comments/" title="test comments">test comments</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/2023-10/" title="In 2023/10">2023/10</a>
+</div>
+
+    <span><a href="/2023/10/04/2023-10-04-%E6%80%BB%E7%BB%93/" title="2023-10-04 总结">2023-10-04 总结</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/2023-10/" title="In 2023/10">2023/10</a>
+</div>
+
+    <span><a href="/2023/10/23/csp-s%E6%B8%B8%E8%AE%B0/" title="csp-s游记">csp-s游记</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/2023-10/" title="In 2023/10">2023/10</a>
+</div>
+
+    <span><a href="/2023/10/10/%E4%BB%8A%E6%97%A5%E4%B8%80%E8%A8%801/" title="今日一言">今日一言</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">夏夏 @ 陶初夏的小窝</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2023/10/04/2023-10-04-总结/',
+    favicon: {
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,fancybox: true,
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
 </body>
 </html>
